@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEPIA — Specialty Coffee House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Epilogue:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="mainNav">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="#origins">Origins</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a href="#" class="brand">SEPIA</a>
+    <div class="nav-actions">
+      <a href="#visit">Locations</a>
+      <a href="#" class="nav-reserve">Reserve a Table</a>
+    </div>
+    <button type="button" class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-inner">
+      <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+      <nav class="mobile-nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="#origins">Origins</a>
+        <a href="#visit">Visit</a>
+        <a href="#visit">Locations</a>
+      </nav>
+      <a href="#" class="mobile-reserve">Reserve a Table</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-h1">Where slow<br>mornings become<br><em>rituals.</em></h1>
+      <p class="hero-sub">Single-origin coffees sourced from small farms across three continents. Brewed with precision, served with intention.</p>
+      <div class="hero-btns">
+        <a href="menu.html" class="btn-primary">Explore the Menu</a>
+        <a href="#origins" class="btn-ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line-v"></div>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">Single Origin Espresso <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Cold Brew Reserve <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Seasonal Pour-Overs <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Specialty Pastries <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Direct-Trade Sourcing <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Café &amp; Roastery <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Single Origin Espresso <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Cold Brew Reserve <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Seasonal Pour-Overs <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Specialty Pastries <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Direct-Trade Sourcing <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Café &amp; Roastery <span class="marquee-dot">✦</span></span>
+    </div>
+  </div>
+
+  <section class="philosophy">
+    <div class="phil-left reveal">
+      <p class="section-eyebrow">Our Philosophy</p>
+      <h2 class="section-title">Coffee as a <em>craft,</em><br>not a commodity.</h2>
+      <div class="divider"></div>
+      <p class="phil-body">We believe great coffee begins long before it reaches your cup. Every bean we serve comes from growers we know by name — people who tend their crops with the same care we bring to every extraction.</p>
+      <p class="phil-body">At Sepia, slowness is not inefficiency. It is the entire point.</p>
+      <div class="phil-stats">
+        <div class="phil-stat"><div class="stat-num">14</div><div class="stat-label">Origin Countries</div></div>
+        <div class="phil-stat"><div class="stat-num">6</div><div class="stat-label">Years of Craft</div></div>
+      </div>
+    </div>
+    <div class="phil-right reveal reveal-delay1">
+      <canvas id="philCanvas"></canvas>
+      <div class="phil-overlay"></div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="menu">
+    <div class="menu-header reveal">
+      <div>
+        <p class="section-eyebrow">Current Menu</p>
+        <h2 class="section-title">Seasonal <em>signatures</em></h2>
+      </div>
+      <a href="menu.html" class="menu-link">View Full Menu →</a>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card reveal">
+        <div class="mc-canvas-wrap"><canvas id="mc0"></canvas></div>
+        <div class="mc-body">
+          <div class="mc-origin">Ethiopia · Yirgacheffe</div>
+          <div class="mc-name">The Dawn Pour</div>
+          <p class="mc-desc">A bright, floral pour-over with notes of jasmine, bergamot, and stone fruit. Best enjoyed before noon.</p>
+          <div class="mc-footer"><span class="mc-price">₱280</span><button class="mc-order">Order Now</button></div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay1">
+        <div class="mc-canvas-wrap"><canvas id="mc1"></canvas></div>
+        <div class="mc-body">
+          <div class="mc-origin">Colombia · Huila</div>
+          <div class="mc-name">Midnight Cortado</div>
+          <p class="mc-desc">Equal parts espresso and silken milk. Rich dark chocolate, toasted hazelnut, a gentle lingering finish.</p>
+          <div class="mc-footer"><span class="mc-price">₱220</span><button class="mc-order">Order Now</button></div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay2">
+        <div class="mc-canvas-wrap"><canvas id="mc2"></canvas></div>
+        <div class="mc-body">
+          <div class="mc-origin">Japan · Kyoto-style</div>
+          <div class="mc-name">Amber Cold Brew</div>
+          <p class="mc-desc">18-hour slow-steeped with spring water. Whiskey-like depth, vanilla oak, and an impossibly smooth finish.</p>
+          <div class="mc-footer"><span class="mc-price">₱260</span><button class="mc-order">Order Now</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience">
+    <canvas id="expCanvas" width="1100" height="600"></canvas>
+    <div class="exp-overlay"></div>
+    <div class="exp-content reveal">
+      <p class="section-eyebrow">The Sepia Experience</p>
+      <blockquote class="exp-quote">The best cup is the one you almost didn't have time for.</blockquote>
+      <p class="exp-author">— Marco Delgado, Head Barista</p>
+      <div class="exp-details">
+        <div><div class="ed-label">Atmosphere</div><div class="ed-val">Quiet. Considered. Warm.</div></div>
+        <div><div class="ed-label">Music</div><div class="ed-val">Jazz &amp; ambient only</div></div>
+        <div><div class="ed-label">Wifi</div><div class="ed-val">Available, unannounced</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="origins" id="origins">
+    <div class="origins-inner">
+      <div class="origins-left reveal">
+        <p class="section-eyebrow">From Seed to Cup</p>
+        <h2 class="section-title">Every bean<br>has a <em>story.</em></h2>
+        <p class="origins-body">We travel to source. Twice a year, our team visits partner farms in Ethiopia, Colombia, and Central America — not just to buy, but to understand. The altitude, the soil, the harvest timing. These details live in the cup.</p>
+        <div class="origins-list">
+          <div class="origin-item"><span class="origin-num">01</span><div class="origin-text"><h4>Direct Trade</h4><p>We pay 40% above commodity price and visit every farm we work with.</p></div></div>
+          <div class="origin-item"><span class="origin-num">02</span><div class="origin-text"><h4>Small-Batch Roasting</h4><p>Roasted in our on-site drum roaster every Tuesday and Friday, always to order.</p></div></div>
+          <div class="origin-item"><span class="origin-num">03</span><div class="origin-text"><h4>Seasonal Rotation</h4><p>Our menu shifts with harvest cycles so you always get peak-freshness beans.</p></div></div>
+        </div>
+      </div>
+      <div class="origins-right reveal reveal-delay1">
+        <div class="origin-img"><img src="origins-harvest.png" alt="Coffee farm origin" class="origin-img-photo"></div>
+        <div class="origin-img"><canvas id="og1"></canvas></div>
+        <div class="origin-img"><canvas id="og2"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="visit-header reveal">
+      <div>
+        <p class="section-eyebrow">Find Us</p>
+        <h2 class="section-title">Come as you are.<br><em>Stay a while.</em></h2>
+      </div>
+      <a href="#" class="btn-primary btn-align-end">Get Directions</a>
+    </div>
+    <div class="visit-inner">
+      <div class="visit-col">
+        <div class="vc-label">Flagship</div>
+        <div class="vc-name">BGC Café &amp; Roastery</div>
+        <p class="vc-address">3F The Grid, 9th Avenue,<br>Bonifacio Global City, Taguig 1635</p>
+        <div class="vc-hours">
+          <div class="vc-hour-row"><span>Monday – Friday</span><span>7:00 – 21:00</span></div>
+          <div class="vc-hour-row"><span>Saturday</span><span>8:00 – 22:00</span></div>
+          <div class="vc-hour-row"><span>Sunday</span><span>9:00 – 20:00</span></div>
+        </div>
+        <span class="vc-tag">Roastery Tours Available</span>
+      </div>
+      <div class="visit-col">
+        <div class="vc-label">Poblacion</div>
+        <div class="vc-name">Sepia Makati</div>
+        <p class="vc-address">Joya Lofts, Rockwell Drive,<br>Poblacion, Makati City</p>
+        <div class="vc-hours">
+          <div class="vc-hour-row"><span>Monday – Friday</span><span>7:00 – 20:00</span></div>
+          <div class="vc-hour-row"><span>Saturday</span><span>8:00 – 21:00</span></div>
+          <div class="vc-hour-row"><span>Sunday</span><span>Closed</span></div>
+        </div>
+        <span class="vc-tag">Reservations Accepted</span>
+      </div>
+      <div class="visit-col">
+        <div class="vc-label">Eastside</div>
+        <div class="vc-name">Sepia Quezon City</div>
+        <p class="vc-address">Katipunan Avenue,<br>Loyola Heights, QC 1108</p>
+        <div class="vc-hours">
+          <div class="vc-hour-row"><span>Monday – Friday</span><span>7:30 – 19:30</span></div>
+          <div class="vc-hour-row"><span>Saturday</span><span>8:00 – 20:00</span></div>
+          <div class="vc-hour-row"><span>Sunday</span><span>9:00 – 18:00</span></div>
+        </div>
+        <span class="vc-tag">Opening Soon</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div>
+      <p class="section-eyebrow">Stay in the Loop</p>
+      <h2 class="section-title">New origins.<br><em>First to know.</em></h2>
+      <p class="nl-body">We announce new seasonal coffees, tasting events, and farm stories to our list first. No clutter — just the good stuff.</p>
+    </div>
+    <div>
+      <div class="nl-row">
+        <input class="nl-input" type="email" placeholder="your@email.com">
+        <button class="nl-submit">Subscribe</button>
+      </div>
+      <p class="nl-note">One email per origin drop. Unsubscribe any time.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">SEPIA</div>
+        <p class="footer-tagline">Specialty coffee, sourced with conscience. Brewed with care.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Visit</div>
+        <div class="footer-links">
+          <a href="#">BGC Flagship</a><a href="#">Makati</a>
+          <a href="#">Quezon City</a><a href="#">Reserve a Table</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <div class="footer-links">
+          <a href="#">Full Menu</a><a href="#">Seasonal Offerings</a>
+          <a href="#">Coffee Subscriptions</a><a href="#">Gift Cards</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="#">Our Story</a><a href="#">Farm Partners</a>
+          <a href="#">Careers</a><a href="#">Press</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Sepia Coffee House. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
